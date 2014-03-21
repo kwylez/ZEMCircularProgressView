@@ -1,6 +1,6 @@
 //
-//  ZEMCircularProgressViewTests.m
-//  ZEMCircularProgressViewTests
+//  ExampleTests.m
+//  ExampleTests
 //
 //  Created by Cory D. Wiles on 3/21/14.
 //  Copyright (c) 2014 Cory Wiles. All rights reserved.
@@ -8,11 +8,11 @@
 
 #import <XCTest/XCTest.h>
 
-@interface ZEMCircularProgressViewTests : XCTestCase
+@interface ExampleTests : XCTestCase
 
 @end
 
-@implementation ZEMCircularProgressViewTests
+@implementation ExampleTests
 
 - (void)setUp
 {

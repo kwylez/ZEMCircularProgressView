@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:Source/ZEMCircularProgressView/ZEMCircularProgressView.xcodeproj">
+      location = "group:Source/Example/Example/Example.xcodeproj">
    </FileRef>
 </Workspace>

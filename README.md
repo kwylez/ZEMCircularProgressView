@@ -1,21 +1,21 @@
-//
-//  ZEMViewController.m
-//  ZEMCircularProgressView
-//
-//  Created by Cory D. Wiles on 3/21/14.
-//  Copyright (c) 2014 Cory Wiles. All rights reserved.
-//
+## ZEMCircleProgressView
 
-#import "ZEMViewController.h"
-#import "ZEMCircleProgressView.h"
+Simple circle timer progress view that will animate the stroke of the view. You can manually start and stop the timer, as well as, provide a completion and cancel block.
 
-@interface ZEMViewController ()
+### Inspiration
 
-@property (nonatomic, strong) ZEMCircleProgressView *circularProgressView;
+[FFCircularProgressView](https://github.com/elbryan/FFCircularProgressView)
 
-@end
+## Install
 
-@implementation ZEMViewController
+Just add the following files to your project
+
+* `ZEMCircleProgressView.h/m`
+* `ZEMCircleProgressViewLayer.h/m`
+
+## Usage
+
+```ObjectiveC
 
 - (void)viewDidLoad {
 
@@ -38,8 +38,4 @@
   [self.view addSubview:self.circularProgressView];
 }
 
-- (void)didReceiveMemoryWarning {
-  [super didReceiveMemoryWarning];
-}
-
-@end
+```
