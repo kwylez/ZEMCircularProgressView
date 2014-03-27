@@ -1,6 +1,6 @@
 //
-//  CDWCircleProgressView.h
-//  CDWCircleProgressView
+//  ZEMCircleProgressView.h
+//  ZEMCircleProgressView
 //
 //  Created by Cory D. Wiles on 12/23/13.
 //  Copyright (c) 2013 Cory Wiles. All rights reserved.
@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-extern NSString * const CDWCircleProgressViewAnimatingKey;
-extern NSString * const CDWCircleProgressViewCompletedKey;
+extern NSString * const ZEMCircleProgressViewAnimatingKey;
+extern NSString * const ZEMCircleProgressViewCompletedKey;
 
 @interface ZEMCircleProgressView : UIControl
 

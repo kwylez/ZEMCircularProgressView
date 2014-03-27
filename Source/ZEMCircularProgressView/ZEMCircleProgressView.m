@@ -1,6 +1,6 @@
 //
-//  CDWCircleProgressView.m
-//  CDWCircleProgressView
+//  ZEMCircleProgressView.m
+//  ZEMCircleProgressView
 //
 //  Created by Cory D. Wiles on 12/23/13.
 //  Copyright (c) 2013 Cory Wiles. All rights reserved.
@@ -11,8 +11,8 @@
 #import "ZEMCircleProgressView.h"
 #import "ZEMCircleProgressViewLayer.h"
 
-NSString * const CDWCircleProgressViewAnimatingKey = @"animating";
-NSString * const CDWCircleProgressViewCompletedKey = @"complete";
+NSString * const ZEMCircleProgressViewAnimatingKey = @"animating";
+NSString * const ZEMCircleProgressViewCompletedKey = @"complete";
 
 static NSString * const PROGRESS_VIEW_STROKE_ANIMATION_KEY      = @"strokeAnimation";
 static NSString * const PROGRESS_VIEW_STROKE_ANIMATION_KEY_PATH = @"strokeEnd";
@@ -38,8 +38,8 @@ static NSString * const PROGRESS_VIEW_STROKE_ANIMATION_KEY_PATH = @"strokeEnd";
 
 - (void)dealloc {
   
-  [self removeObserver:self forKeyPath:CDWCircleProgressViewCompletedKey context:NULL];
-  [self removeObserver:self forKeyPath:CDWCircleProgressViewAnimatingKey context:NULL];
+  [self removeObserver:self forKeyPath:ZEMCircleProgressViewCompletedKey context:NULL];
+  [self removeObserver:self forKeyPath:ZEMCircleProgressViewAnimatingKey context:NULL];
   
   [self.timer invalidate];
 }
@@ -80,12 +80,12 @@ static NSString * const PROGRESS_VIEW_STROKE_ANIMATION_KEY_PATH = @"strokeEnd";
     [self updatePath];
     
     [self addObserver:self
-           forKeyPath:CDWCircleProgressViewCompletedKey
+           forKeyPath:ZEMCircleProgressViewCompletedKey
               options:NSKeyValueObservingOptionNew
               context:NULL];
     
     [self addObserver:self
-           forKeyPath:CDWCircleProgressViewAnimatingKey
+           forKeyPath:ZEMCircleProgressViewAnimatingKey
               options:NSKeyValueObservingOptionNew
               context:NULL];
   }
@@ -175,13 +175,13 @@ static NSString * const PROGRESS_VIEW_STROKE_ANIMATION_KEY_PATH = @"strokeEnd";
                                               userInfo:nil
                                                repeats:YES];
 
-  [self willChangeValueForKey:CDWCircleProgressViewAnimatingKey];
+  [self willChangeValueForKey:ZEMCircleProgressViewAnimatingKey];
   _animating = YES;
-  [self didChangeValueForKey:CDWCircleProgressViewAnimatingKey];
+  [self didChangeValueForKey:ZEMCircleProgressViewAnimatingKey];
 
-  [self willChangeValueForKey:CDWCircleProgressViewCompletedKey];
+  [self willChangeValueForKey:ZEMCircleProgressViewCompletedKey];
   _complete = NO;
-  [self didChangeValueForKey:CDWCircleProgressViewCompletedKey];
+  [self didChangeValueForKey:ZEMCircleProgressViewCompletedKey];
 
   [self setNeedsDisplay];
 }
@@ -291,13 +291,13 @@ static NSString * const PROGRESS_VIEW_STROKE_ANIMATION_KEY_PATH = @"strokeEnd";
     
     [self setSelectorForControl:@selector(startTimer)];
     
-    [self willChangeValueForKey:CDWCircleProgressViewCompletedKey];
+    [self willChangeValueForKey:ZEMCircleProgressViewCompletedKey];
     _complete  = YES;
-    [self didChangeValueForKey:CDWCircleProgressViewCompletedKey];
+    [self didChangeValueForKey:ZEMCircleProgressViewCompletedKey];
     
-    [self willChangeValueForKey:CDWCircleProgressViewAnimatingKey];
+    [self willChangeValueForKey:ZEMCircleProgressViewAnimatingKey];
     _animating = NO;
-    [self didChangeValueForKey:CDWCircleProgressViewAnimatingKey];
+    [self didChangeValueForKey:ZEMCircleProgressViewAnimatingKey];
     
     [self setNeedsDisplay];
     
@@ -313,13 +313,13 @@ static NSString * const PROGRESS_VIEW_STROKE_ANIMATION_KEY_PATH = @"strokeEnd";
   
   [self setSelectorForControl:@selector(startTimer)];
     
-  [self willChangeValueForKey:CDWCircleProgressViewCompletedKey];
+  [self willChangeValueForKey:ZEMCircleProgressViewCompletedKey];
   _complete  = YES;
-  [self didChangeValueForKey:CDWCircleProgressViewCompletedKey];
+  [self didChangeValueForKey:ZEMCircleProgressViewCompletedKey];
   
-  [self willChangeValueForKey:CDWCircleProgressViewAnimatingKey];
+  [self willChangeValueForKey:ZEMCircleProgressViewAnimatingKey];
   _animating = NO;
-  [self didChangeValueForKey:CDWCircleProgressViewAnimatingKey];
+  [self didChangeValueForKey:ZEMCircleProgressViewAnimatingKey];
   
   [self setNeedsDisplay];
   
@@ -345,13 +345,13 @@ static NSString * const PROGRESS_VIEW_STROKE_ANIMATION_KEY_PATH = @"strokeEnd";
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
   
-  if ([keyPath isEqual:CDWCircleProgressViewCompletedKey]) {
+  if ([keyPath isEqual:ZEMCircleProgressViewCompletedKey]) {
     
     if ([self isComplete]) {
       [self.timer invalidate];
     }
     
-  } else if ([keyPath isEqual:CDWCircleProgressViewAnimatingKey]) {
+  } else if ([keyPath isEqual:ZEMCircleProgressViewAnimatingKey]) {
   
     if ([self isAnimating]) {
 
